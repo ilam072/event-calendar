@@ -24,7 +24,6 @@ import (
 	"time"
 )
 
-// TODO: добавить часовые пояса
 func main() {
 	// Initialize config
 	cfg := config.MustLoad()

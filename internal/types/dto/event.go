@@ -7,13 +7,13 @@ import (
 
 type CreateEventRequest struct {
 	Date        time.Time  `json:"date" validate:"required"`
-	Description string     `json:"description" validate:"required"`
+	Description string     `json:"description" validate:"required,min=1,max=500"`
 	RemindAt    *time.Time `json:"remind_at,omitempty"`
 }
 
 type UpdateEventRequest struct {
 	Date        time.Time  `json:"date" validate:"required"`
-	Description string     `json:"description" validate:"required"`
+	Description string     `json:"description" validate:"required,min=1,max=500"`
 	RemindAt    *time.Time `json:"remind_at" validate:"required"`
 }
 
